@@ -9,7 +9,7 @@
 <body>
   <header class="header">
     <div class="header__logo">
-      <a href="https://htmlacademy.ru/">
+      <a href="index.html">
         <img src="img/index-logo-header.png" alt="Девайс">
       </a>
     </div>
@@ -41,13 +41,21 @@
   </header>
   <section class="breadcrumbs">
     <h1 class="breadcrumbs__title">Моноподы для селфи</h1>
-    <a href="#" class="breadcrumbs__link">Главная</a>
-    <a href="#" class="breadcrumbs__link">Каталог товаров</a>
-    <a href="#" class="breadcrumbs__link">Моноподы для селфи</a>
+    <ul class="breadcrumbs__links">
+      <li class="breadcrumbs__link">
+        <a href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__link">
+        <a href="#">Каталог товаров</a>
+      </li>
+      <li class="breadcrumbs__link">
+        <a href="#">Моноподы для селфи</a>
+      </li>
+    </ul>
   </section>
   <aside class="filter">
+    <h2 class="filter__heading">Фильтр:</h2>
     <form action="#" method="post" class="filter__items">
-      <h2 class="filter__heading">Фильтр:</h2>
       <div class="filter__item filter__item--price">
         <h2 class="filter__title">Стоимость</h2>
 
@@ -92,11 +100,23 @@
   <section class="products">
     <div class="sorting">
       <h2 class="sorting__title">Сортировка:</h2>
-      <a href="#" class="sorting__link sorting__link--active">По цене</a>
-      <a href="#" class="sorting__link">По типу</a>
-      <a href="#" class="sorting__link">По популярности</a>
-      <a href="#" class="sorting__link sorting__link--increase">По возрастанию</a>
-      <a href="#" class="sorting__link sorting__link--decrease">По убыванию</a>
+      <ul class="sorting__links">
+        <li class="sorting__link sorting__link--active">
+          <a href="#">По цене</a>
+        </li>
+        <li class="sorting__link">
+          <a href="#">По типу</a>
+        </li>
+        <li class="sorting__link">
+          <a href="#">По популярности</a>
+        </li>
+        <li class="sorting__link sorting__link--increase">
+          <a href="#">По возрастанию</a>
+        </li>
+        <li class="sorting__link sorting__link--decrease">
+          <a href="#">По убыванию</a>
+        </li>
+      </ul>
     </div>
     <article class="products__item">
       <a href="#" class="products__link">
@@ -126,17 +146,29 @@
       </a>
       <span>4 900 руб.</span>
     </article>
-    <div class="products__pages">
-      <a href="#" class="products__page products__page--back">Назад</a>
-      <a href="#" class="products__page products__page--active">1</a>
-      <a href="#" class="products__page">2</a>
-      <a href="#" class="products__page">3</a>
-      <a href="#" class="products__page products__page--forward">Вперед</a>
-    </div>
+    <ul class="products__pages">
+      <li class="products__page products__page--back">
+        <a href="#">Назад</a>
+      </li>
+      <li class="products__page products__page--active">
+        <a href="#">1</a>
+      </li>
+      <li class="products__page">
+        <a href="#">2</a>
+      </li>
+      <li class="products__page">
+        <a href="#">3</a>
+      </li>
+      <li class="products__page products__page--forward">
+        <a href="#">Вперед</a>
+      </li>
+    </ul>
   </section>
   <footer class="footer">
     <div class="footer__user-interface">
-      <img src="img/index-logo-footer.png" alt="Девайс">
+      <a href="index.html" class="footer__logo">
+        <img src="img/index-logo-footer.png" alt="Девайс">
+      </a>
       <ul class="footer__links">
         <li class="footer__link footer__link--login">
           <a href="#">Войти</a>
