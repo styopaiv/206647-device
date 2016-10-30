@@ -1,3 +1,172 @@
-body {
-  font-size: 15px;
+html, body {
+  min-width: 1440px;
+  margin: 0;
+  padding: 0;
+}
+
+.narrow-container {
+  width: 1040px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.header__logo {
+  margin-bottom: 35px;
+}
+
+.header__user-interface {
+  display: flex;
+  margin-bottom: 52px;
+}
+
+.header__user-interface form {
+  width: 540px;
+}
+
+.header__link--login {
+  width: 280px;
+}
+
+.header__link--compare {
+  width: 136px;
+}
+
+.header__link--cart {
+  width: 84px;
+}
+
+.header__main-links {
+  display: flex;
+  align-items: baseline;
+}
+
+.header__catalog {
+  width: 540px;
+}
+
+.header-nav {
+  width: 500px;
+  justify-content: flex-end;
+}
+
+.merch-slider {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.merch-slider__item {
+  display: flex;
+}
+
+.merch-slider__image {
+  width: 540px;
+}
+
+.merch-slider__description {
+  width: 500px;
+}
+
+.popular {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 85px;
+}
+
+.popular__item {
+  width: 160px;
+}
+
+.services-slider {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.services-slider__links {
+  width: 400px;
+}
+
+.services-slider__item {
+  width: 763px;
+  display: flex;
+  flex-direction: column;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 90px;
+}
+
+.company {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.company__item--left {
+  width: 600px;
+}
+
+.company__item--right {
+  width: 560px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__user-interface {
+  display: flex;
+  margin-bottom: 33px;
+}
+
+.footer__logo {
+  width: 800px;
+}
+
+.footer__links {
+  width: 325px;
+}
+
+.footer-nav {
+  width: 360px;
+}
+
+.footer__contacts {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.footer__contacts p {
+  width: 360px;
+}
+
+.footer-nav {
+  width: 640px;
+}
+
+.social {
+  display: flex;
+}
+
+.social__items {
+  margin: 0 auto;
+}
+
+.social__academy-logo {
+  justify-content: flex-end;
+  width: 60px;
 }
