@@ -64,7 +64,6 @@ html, body {
 .merch-slider {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 
 .merch-slider__item {
@@ -82,7 +81,8 @@ html, body {
 .popular {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 85px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .popular__item {
@@ -91,7 +91,6 @@ html, body {
 
 .services-slider {
   display: flex;
-  margin-bottom: 80px;
 }
 
 .services-slider__links {
@@ -107,7 +106,8 @@ html, body {
 .partners {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 90px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .company {
@@ -169,4 +169,54 @@ html, body {
 .social__academy-logo {
   justify-content: flex-end;
   width: 60px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.catalog {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.filter__item--color {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__item--bluetooth {
+  display: flex;
+  flex-direction: column;
+}
+
+.products {}
+
+.sorting {
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.products__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  margin-bottom: 40px;
+}
+
+.products__item {
+  width: 360px;
+}
+
+.products__pages {
+  width: 760px;
 }
