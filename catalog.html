@@ -13,14 +13,14 @@
     <div class="narrow-container">
       <div class="header__logo">
         <a href="index.html">
-          <img src="img/logo-black.png" alt="Девайс" width="164" height="36">
+          <span>Device</span>
         </a>
       </div>
       <div class="header__user-interface">
         <form action="#" method="get">
           <input type="search" placeholder="Поиск по сайту">
         </form>
-        <a href="#" class="header__link header__link--user">Валентин Петухов</a>
+        <a href="#" class="header__link header__link--active-user">Валентин Петухов</a>
         <a href="#" class="header__link header__link--active-login">Выйти</a>
         <a href="#" class="header__link header__link--compare">Сравнить</a>
         <a href="#" class="header__link header__link--cart">Корзина</a>
@@ -59,128 +59,165 @@
       </ul>
     </div>
   </section>
-  <main class="narrow-container">
-    <div class="catalog">
-      <aside class="filter">
-        <h2 class="filter__heading">Фильтр:</h2>
-        <form action="#" method="post" class="filter__items">
-          <div class="filter__item filter__item--price">
-            <h2 class="filter__title">Стоимость</h2>
-
-          </div>
-          <div class="filter__item filter__item--color">
-            <h2 class="filter__title">Цвет</h2>
-            <label class="filter__checkbox">
-          <input type="checkbox" name="black">
-          <span>Черный</span>
-        </label>
-            <label class="filter__checkbox">
-          <input type="checkbox" name="white">
-          <span>Белый</span>
-        </label>
-            <label class="filter__checkbox">
-          <input type="checkbox" name="blue">
-          <span>Синий</span>
-        </label>
-            <label class="filter__checkbox">
-          <input type="checkbox" name="red">
-          <span>Красный</span>
-        </label>
-            <label class="filter__checkbox">
-          <input type="checkbox" name="pink">
-          <span>Розовый</span>
-        </label>
-          </div>
-          <div class="filter__item filter__item--bluetooth">
-            <h2 class="filter__title">Bluetooth</h2>
-            <label class="filter__toggle">
-          <input type="radio" name="bluetooth" value="yes" checked>
-          <span>Есть</span>
-        </label>
-            <label class="filter__toggle">
-          <input type="radio" name="bluetooth" value="no">
-          <span>Нет</span>
-        </label>
-          </div>
-          <input type="submit" value="Показать" class="filter__button">
-        </form>
-      </aside>
-      <section class="products">
-        <div class="sorting">
-          <h2 class="sorting__title">Сортировка:</h2>
-          <ul class="sorting__links">
-            <li class="sorting__link sorting__link--active">
-              <a href="#">По цене</a>
-            </li>
-            <li class="sorting__link">
-              <a href="#">По типу</a>
-            </li>
-            <li class="sorting__link">
-              <a href="#">По популярности</a>
-            </li>
-            <li class="sorting__link sorting__link--increase">
-              <a href="#">up</a>
-            </li>
-            <li class="sorting__link sorting__link--decrease">
-              <a href="#">down</a>
-            </li>
-          </ul>
-        </div>
-        <div class="products__items">
-          <article class="products__item">
-            <a href="#" class="products__link">
-              <img src="img/amateur_stick.jpg" alt="Любительская селфи-палка" width="360" height="380">
-              <h1 class="products__name">Любительская селфи-палка</h1>
-            </a>
-            <span>500 руб.</span>
-          </article>
-          <article class="products__item">
-            <a href="#" class="products__link">
-              <img src="img/pro-stick.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-              <h1 class="products__name">Профессиональная селфи-палка</h1>
-            </a>
-            <span>1 500 руб.</span>
-          </article>
-          <article class="products__item">
-            <a href="#" class="products__link">
-              <img src="img/diving-stick.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-              <h1 class="products__name">Непотопляемая селфи-палка</h1>
-            </a>
-            <span>2 500 руб.</span>
-          </article>
-          <article class="products__item">
-            <a href="#" class="products__link products__link--new">
-              <img src="img/followme-stick.jpg" alt="Cелфи-палка следуй за мной" width="360" height="380">
-              <h1 class="products__name">Cелфи-палка "Следуй за мной"</h1>
-            </a>
-            <span>4 900 руб.</span>
-          </article>
-        </div>
-        <ul class="products__pagination">
-          <li class="products__page products__page--back">
-            <a href="#">Назад</a>
-          </li>
-          <li class="products__page products__page--active">
-            <a href="#">1</a>
-          </li>
-          <li class="products__page">
-            <a href="#">2</a>
-          </li>
-          <li class="products__page">
-            <a href="#">3</a>
-          </li>
-          <li class="products__page products__page--forward">
-            <a href="#">Вперед</a>
-          </li>
-        </ul>
-      </section>
+  <main>
+    <div class="background-wrapper">
     </div>
+      <div class="inner-container">
+        <div class="catalog">
+          <aside class="filter">
+            <h2 class="filter__heading">Фильтр:</h2>
+            <form action="#" method="post" class="filter__items">
+              <div class="filter__item filter__item--price">
+                <h2 class="filter__title">Стоимость</h2>
+                <div class="price-filter">
+                  <div class="price-filter__scale">
+                    <div class="price-filter__bar"></div>
+                  </div>
+                  <div class="price-filter__toggle price-filter__toggle--min"></div>
+                  <div class="price-filter__toggle price-filter__toggle--max"></div>
+                  <div class="price-filter__price-controls">
+                    <label class="price-filter__min-price">от<input name="min-price" type="text" value="0"></label>
+                    <label class="price-filter__max-price">до<input name="max-price" type="text" value="5000"></label>
+                  </div>
+                </div>
+              </div>
+              <div class="filter__item filter__item--color">
+                <h2 class="filter__title">Цвет</h2>
+                <label class="filter__checkbox">
+                  <input type="checkbox" name="black" checked>
+                  <span>Черный</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" name="white">
+                  <span>Белый</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" name="blue">
+                  <span>Синий</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" name="red">
+                  <span>Красный</span>
+                </label>
+                <label class="filter__checkbox">
+                  <input type="checkbox" name="pink">
+                  <span>Розовый</span>
+                </label>
+              </div>
+              <div class="filter__item filter__item--bluetooth">
+                <h2 class="filter__title">Bluetooth</h2>
+                <label class="filter__toggle">
+                  <input type="radio" name="bluetooth" value="yes" checked>
+                  <span>Есть</span>
+                </label>
+                <label class="filter__toggle">
+                  <input type="radio" name="bluetooth" value="no">
+                  <span>Нет</span>
+                </label>
+              </div>
+              <input type="submit" value="Показать" class="filter__button">
+            </form>
+          </aside>
+          <section class="products">
+            <div class="sorting">
+              <h2 class="sorting__title">Сортировка:</h2>
+              <ul class="sorting__links">
+                <li class="sorting__link sorting__link--active">
+                  <a href="#">По цене</a>
+                </li>
+                <li class="sorting__link">
+                  <a href="#">По типу</a>
+                </li>
+                <li class="sorting__link">
+                  <a href="#">По популярности</a>
+                </li>
+              </ul>
+              <div class="sorting__direction-links">
+                <a href="#" class="sorting__direction-link sorting__direction-link--up">up</a>
+                <a href="#" class="sorting__direction-link sorting__direction-link--down">down</a>
+              </div>
+            </div>
+            <div class="products__items">
+              <article class="products__item">
+                <div class="products__actions">
+                  <a href="#" class="action__buy">В корзину</a>
+                  <a href="#" class="action__compare">Добавить к сравнению</a>
+                </div>
+                <a href="#" class="products__pic">
+                  <img src="img/amateur_stick.jpg" alt="Любительская селфи-палка" width="360" height="380">
+                </a>
+                <div class="products__link">
+                  <h1 class="products__name"><a href="#">Любительская селфи-палка</a></h1>
+                  <span>500 руб.</span>
+                </div>
+              </article>
+              <article class="products__item">
+                <div class="products__actions">
+                  <a href="#" class="action__buy">В корзину</a>
+                  <a href="#" class="action__compare">Добавить к сравнению</a>
+                </div>
+                <a href="#" class="products__pic">
+                  <img src="img/pro-stick.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
+                </a>
+                <div class="products__link">
+                  <h1 class="products__name"><a href="#">Профессиональная селфи-палка</a></h1>
+                  <span>1 500 руб.</span>
+                </div>
+              </article>
+              <article class="products__item">
+                <div class="products__actions">
+                  <a href="#" class="action__buy">В корзину</a>
+                  <a href="#" class="action__compare">Добавить к сравнению</a>
+                </div>
+                <a href="#" class="products__pic">
+                  <img src="img/diving-stick.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
+                </a>
+                <div class="products__link">
+                  <h1 class="products__name"><a href="#">Непотопляемая селфи-палка</a></h1>
+                  <span>2 500 руб.</span>
+                </div>
+              </article>
+              <article class="products__item">
+                <div class="products__actions">
+                  <a href="#" class="action__buy">В корзину</a>
+                  <a href="#" class="action__compare">Добавить к сравнению</a>
+                </div>
+                <a href="#" class="products__pic products__pic--new">
+                  <span>New</span>
+                  <img src="img/followme-stick.jpg" alt="Cелфи-палка следуй за мной" width="360" height="380">
+                </a>
+                <div class="products__link">
+                  <h1 class="products__name"><a href="#">Cелфи-палка "Следуй за мной"</a></h1>
+                  <span>4 900 руб.</span>
+                </div>
+              </article>
+            </div>
+            <ul class="products__pagination">
+              <li class="products__page products__page--back">
+                <a href="#">Назад</a>
+              </li>
+              <li class="products__page">
+                <a href="#">1</a>
+              </li>
+              <li class="products__page">
+                <a href="#">2</a>
+              </li>
+              <li class="products__page">
+                <a href="#">3</a>
+              </li>
+              <li class="products__page products__page--forward">
+                <a href="#">Вперед</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
   </main>
   <footer class="footer">
     <div class="container">
       <div class="footer__user-interface">
         <a href="index.html" class="footer__logo">
-          <img src="img/logo-yellow.png" alt="Девайс" width="163" height="36">
+          <span>Device</span>
         </a>
         <ul class="footer__links">
           <li class="footer__link footer__link--login">
@@ -213,20 +250,12 @@
       </div>
       <div class="social">
         <div class="social__items">
-          <a href="https://www.facebook.com/htmlacademy" class="social__item social__item--fb">
-            <img src="img/fb.png" alt="facebook" width="39" height="38">
-          </a>
-          <a href="https://www.instagram.com/htmlacademy" class="social__item social__item--instagram">
-            <img src="img/in.png" alt="instagram" width="39" height="38">
-          </a>
-          <a href="https://twitter.com/htmlacademy_ru" class="social__item social__item--twitter">
-            <img src="img/twitter.png" alt="twitter" width="39" height="38">
-          </a>
+          <a href="https://www.facebook.com/htmlacademy" class="social__item social__item--fb">Facebook</a>
+          <a href="https://www.instagram.com/htmlacademy" class="social__item social__item--instagram">Instagram</a>
+          <a href="https://twitter.com/htmlacademy_ru" class="social__item social__item--twitter">Twitter</a>
         </div>
         <div class="social__academy-logo">
-          <a href="https://htmlacademy.ru/">
-            <img src="img/htmlacademy.png" alt="HTML Academy" width="27" height="34">
-          </a>
+          <a href="https://htmlacademy.ru/">Htmlacademy</a>
         </div>
 
       </div>
