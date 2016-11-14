@@ -12,13 +12,14 @@
   <header class="header">
     <div class="narrow-container">
       <div class="header__logo">
-        <a href="index.">
+        <a href="index.html">
           <span>Device</span>
         </a>
       </div>
       <div class="header__user-interface">
-        <form action="#" method="get">
+        <form action="#" method="get" class="header-search">
           <input type="search" placeholder="Поиск по сайту">
+          <button type="submit" class="header-search__button">Найти</button>
         </form>
         <a href="#" class="header__link header__link--login">Войти</a>
         <a href="#" class="header__link header__link--compare">Сравнить</a>
@@ -26,6 +27,34 @@
       </div>
       <div class="header__main-links">
         <a href="catalog.html" class="header__catalog">Каталог товаров</a>
+        <div class="catalog-dropdown">
+          <div class="catalog-dropdown__wrapper">
+            <ul class="catalog-dropdown__items">
+              <li class="catalog-dropdown__item">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a href="#">Моноподы для сефли</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="catalog-dropdown__items">
+              <li class="catalog-dropdown__item">
+                <a href="#">Фитнесс-браслеты</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="catalog-dropdown__items">
+              <li class="catalog-dropdown__item">
+                <a href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <nav class="header-nav">
           <ul class="header-nav__items">
             <li class="header-nav__item">
@@ -40,19 +69,30 @@
           </ul>
         </nav>
       </div>
+
     </div>
   </header>
   <section class="merch-slider">
     <div class="narrow-container">
+      <input type="radio" id="btn-1" name="toggle" checked>
+      <input type="radio" id="btn-2" name="toggle">
+      <input type="radio" id="btn-3" name="toggle">
+      <div class="merch-slider__controls">
+        <label for="btn-1"></label>
+        <label for="btn-2"></label>
+        <label for="btn-3"></label>
+      </div>
       <article class="merch-slider__item">
         <div class="merch-slider__image">
           <img src="img/stick-picture.png" alt="Селфи палка" width="384" height="486">
         </div>
         <div class="merch-slider__description">
+          <span class="merch-slider__number">01</span>
           <h1 class="merch-slider__title">Делай селфи, как Бен Стиллер!</h1>
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a class="merch-slider__link" href="#">Подробнее</a>
+
           <ul class="merch-slider__features">
             <li class="merch-slider__feature">
               <span class="merch-slider__feature-title">8,5 м</span>
@@ -74,6 +114,7 @@
           <img src="img/bracelet-picture.png" alt="Фитнесс-браслет" width="345" height="485">
         </div>
         <div class="merch-slider__description">
+          <span class="merch-slider__number">02</span>
           <h1 class="merch-slider__title">Худеем правильно!</h1>
           <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
@@ -91,6 +132,7 @@
           <img src="img/quadrocopter-picure.png" alt="Квадрокоптер" width="526" height="334">
         </div>
         <div class="merch-slider__description">
+          <span class="merch-slider__number">03</span>
           <h1 class="merch-slider__title">Порхает как бабочка, жалит как пчела!</h1>
           <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
@@ -203,12 +245,12 @@
           <h2 class="company__title">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
           </p>
-          <div class="company__map">
+          <div class="company__map company__map--js">
             <a href="#">
               <img src="img/map.png" alt="Карта" width="560" height="222">
             </a>
           </div>
-          <a class="company__link" href="#">Напишите нам</a>
+          <a class="company__link company__link--popup" href="#">Напишите нам</a>
         </div>
       </section>
     </div>
@@ -260,6 +302,33 @@
       </div>
     </div>
   </footer>
+  <div class="modal-content-letter">
+    <form action="#" method="post" class="company-letter__items">
+      <button class="modal-content__close-button" type="button">Закрыть</button>
+      <label class="modal-content-letter__item modal-content-letter__item--name">
+        <span>Ваше имя</span>
+        <input type="text" name="name"  placeholder="Представьтесь, пожалуйста">
+      </label>
+      <label class="modal-content-letter__item modal-content-letter__item--e-mail">
+        <span>Ваш e-mail:</span>
+        <input type="text" name="mail" placeholder="Для отправки ответа">
+      </label>
+      <label class="modal-content-letter__item modal-content-letter__item--letter-content">
+        <span>Текст письма</span>
+        <textarea name="text" placeholder="В свободной форме"></textarea>
+      </label>
+      <button type="submit" class="modal-content-letter__button">Отправить</button>
+    </form>
+  </div>
+  <div class="modal-content-map">
+
+    <button class="modal-content__close-button" type="button">Закрыть</button>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1479107292408"
+        width="994" height="593" style="border:0" allowfullscreen></iframe>
+    <div id="yandex-map"></div>
+  </div>
+  <div class="modal-content-map__overlay"></div>
+  <script src="js/modal-content.js"></script>
 </body>
 
 </html>

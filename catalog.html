@@ -17,8 +17,9 @@
         </a>
       </div>
       <div class="header__user-interface">
-        <form action="#" method="get">
+        <form action="#" method="get" class="header-search">
           <input type="search" placeholder="Поиск по сайту">
+          <button type="submit" class="header-search__button">Найти</button>
         </form>
         <a href="#" class="header__link header__link--active-user">Валентин Петухов</a>
         <a href="#" class="header__link header__link--active-login">Выйти</a>
@@ -27,6 +28,34 @@
       </div>
       <div class="header__main-links">
         <a href="catalog.html" class="header__catalog">Каталог товаров</a>
+        <div class="catalog-dropdown">
+          <div class="catalog-dropdown__wrapper">
+            <ul class="catalog-dropdown__items">
+              <li class="catalog-dropdown__item">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a href="#">Моноподы для сефли</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="catalog-dropdown__items">
+              <li class="catalog-dropdown__item">
+                <a href="#">Фитнесс-браслеты</a>
+              </li>
+              <li class="catalog-dropdown__item">
+                <a href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="catalog-dropdown__items">
+              <li class="catalog-dropdown__item">
+                <a href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <nav class="header-nav">
           <ul class="header-nav__items">
             <li class="header-nav__item">
@@ -115,7 +144,7 @@
                   <span>Нет</span>
                 </label>
               </div>
-              <input type="submit" value="Показать" class="filter__button">
+              <button type="submit" class="filter__button">Показать</button>
             </form>
           </aside>
           <section class="products">
@@ -196,7 +225,7 @@
               <li class="products__page products__page--back">
                 <a href="#">Назад</a>
               </li>
-              <li class="products__page">
+              <li class="products__page products__page--active">
                 <a href="#">1</a>
               </li>
               <li class="products__page">
