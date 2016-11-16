@@ -1549,6 +1549,7 @@ input[type="radio"]:checked+span::after {
 }
 
 .products__item {
+  position: relative;
   width: 360px;
 }
 
@@ -1641,14 +1642,10 @@ input[type="radio"]:checked+span::after {
   display: flex;
 }
 
-.products__pic--new {
-  position: relative;
-}
-
-.products__pic--new span {
+.products__new-pic {
   position: absolute;
-  bottom: 313px;
-  right: 40px;
+  top: 51px;
+  right: 37px;
   color: #000000;
   opacity: 0.2;
   font-family: "Gilroy-eb", "Arial", sans-serif;
@@ -1657,12 +1654,12 @@ input[type="radio"]:checked+span::after {
   text-transform: uppercase;
 }
 
-.products__pic--new span::before {
+.products__new-pic::before {
   content: "";
   position: absolute;
   display: block;
-  top: -25px;
-  right: -15px;
+  top: -24px;
+  right: -13px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
