@@ -778,31 +778,37 @@ img {
   z-index: -3;
 }
 
-.services-slider__button--active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 285px;
-  height: 40px;
-  background: #000000;
-  z-index: -2;
-}
-
-.services-slider__button--active span {
-  color: #f0c52e;
-}
-
 #services-btn-1:checked~.services-slider__controls label[for="services-btn-1"] {
+  width: 285px;
   background: #000000;
+  color: #f0c52e;
+  padding-right: 110px;
 }
 
 #services-btn-2:checked~.services-slider__controls label[for="services-btn-2"] {
+  width: 285px;
   background: #000000;
+  color: #f0c52e;
+  padding-right: 110px;
 }
 
 #services-btn-3:checked~.services-slider__controls label[for="services-btn-3"] {
+  width: 285px;
   background: #000000;
+  color: #f0c52e;
+  padding-right: 110px;
+}
+
+#services-btn-1:checked~.services-slider__controls label[for="services-btn-1"]::before {
+  opacity: 0;
+}
+
+#services-btn-2:checked~.services-slider__controls label[for="services-btn-2"]::before {
+  opacity: 0;
+}
+
+#services-btn-3:checked~.services-slider__controls label[for="services-btn-3"]::before {
+  opacity: 0;
 }
 
 .services-slider__title {
