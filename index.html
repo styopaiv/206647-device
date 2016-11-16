@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/min-style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
       <div class="header__user-interface">
         <form action="#" method="get" class="header-search">
           <input type="search" placeholder="Поиск по сайту">
-          <button type="submit" class="header-search__button">Найти</button>
+          <button type="button" class="header-search__button">Найти</button>
         </form>
         <a href="#" class="header__link header__link--login">Войти</a>
         <a href="#" class="header__link header__link--compare">Сравнить</a>
@@ -88,7 +88,7 @@
         </div>
         <div class="merch-slider__description">
           <span class="merch-slider__number">01</span>
-          <h1 class="merch-slider__title">Делай селфи, как Бен Стиллер!</h1>
+          <h1 class="merch-slider__title">Делай селфи,<br> как Бен Стиллер!</h1>
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
           <a class="merch-slider__link" href="#">Подробнее</a>
@@ -109,13 +109,13 @@
           </ul>
         </div>
       </article>
-      <!-- <article class="merch-slider__item">
+      <article class="merch-slider__item">
         <div class="merch-slider__image">
           <img src="img/bracelet-picture.png" alt="Фитнесс-браслет" width="345" height="485">
         </div>
         <div class="merch-slider__description">
           <span class="merch-slider__number">02</span>
-          <h1 class="merch-slider__title">Худеем правильно!</h1>
+          <h1 class="merch-slider__title">Худеем<br> правильно!</h1>
           <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
           <a class="merch-slider__link" href="#">Подробнее</a>
@@ -128,7 +128,7 @@
         </div>
       </article>
       <article class="merch-slider__item">
-        <div class="merch-slider__image">
+        <div class="merch-slider__image merch-slider__image--positioned">
           <img src="img/quadrocopter-picure.png" alt="Квадрокоптер" width="526" height="334">
         </div>
         <div class="merch-slider__description">
@@ -148,7 +148,7 @@
             </li>
           </ul>
         </div>
-      </article> -->
+      </article>
     </div>
   </section>
   <main>
@@ -194,11 +194,14 @@
     </div>
     <section class="services-slider">
       <div class="container">
-        <ul class="services-slider__links">
-          <li class="services__link services__link--active"><a href="#">Доставка</a></li>
-          <li class="services__link"><a href="#">Гарантия</a></li>
-          <li class="services__link"><a href="#">Кредит</a></li>
-        </ul>
+        <div class="services-slider__controls">
+          <label for="services-btn-1" class="services-slider__button services-slider__button--active"><span>Доставка</span></label>
+          <label for="services-btn-2" class="services-slider__button"><span>Гарантия</span></label>
+          <label for="services-btn-3" class="services-slider__button"><span>Кредит</span></label>
+        </div>
+        <input type="radio" id="services-btn-1" name="services-toggle" checked>
+        <input type="radio" id="services-btn-2" name="services-toggle">
+        <input type="radio" id="services-btn-3" name="services-toggle">
         <article class="services-slider__item">
           <div class="services-slider__description">
             <h1 class="services-slider__title">Доставка</h1>
@@ -206,18 +209,20 @@
             </p>
           </div>
         </article>
-        <!-- <article class="services-slider__item">
-        <h1 class="services-slider__title">Гарантия</h1>
-        <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
-        </p>
-        <img src="img/waranty-logo.png" class="services-slider__picture" alt="Гарантия" width="171" height="195">
-      </article>
-      <article class="services-slider__item">
-        <h1 class="services-slider__title">Кредит</h1>
-        <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
-        </p>
-        <img src="img/credit-logo.png" class="services-slider__picture" alt="Кредит" width="156" height="188">
-      </article> -->
+        <article class="services-slider__item">
+          <div class="services-slider__description">
+            <h1 class="services-slider__title">Гарантия</h1>
+            <p>Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+            </p>
+          </div>
+        </article>
+        <article class="services-slider__item">
+          <div class="services-slider__description">
+            <h1 class="services-slider__title">Кредит</h1>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
     <div class="container">
@@ -328,7 +333,7 @@
     <div id="yandex-map"></div>
   </div>
   <div class="modal-content-map__overlay"></div>
-  <script src="js/modal-content.js"></script>
+  <script src="js/min-modal-content.js"></script>
 </body>
 
 </html>

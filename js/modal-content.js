@@ -14,16 +14,15 @@ var mapClose = mapPopup.querySelector(".modal-content__close-button");
 
 
 
-
 link.addEventListener("click", function(event) {
   event.preventDefault("");
   letter.classList.add("modal-content-show");
   if (storage) {
-         login.value = storage;
-         mail.focus();
-       } else {
-         login.focus();
-       }
+    login.value = storage;
+    mail.focus();
+  } else {
+    login.focus();
+  }
 });
 
 close.addEventListener("click", function(event) {
@@ -34,10 +33,12 @@ close.addEventListener("click", function(event) {
 form.addEventListener("submit", function(event) {
   if (!login.value || !mail.value || !text.value) {
     event.preventDefault();
-    console.log("Нужно ввести логин, пароль и текст письма");
+    login.style.backgroundColor = "#f6dada";
+    mail.style.backgroundColor = "#f6dada";
+    text.style.backgroundColor = "#f6dada";
   } else {
-        localStorage.setItem("login", login.value);
-      }
+    localStorage.setItem("login", login.value);
+  }
 });
 
 window.addEventListener("keydown", function(event) {
